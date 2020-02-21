@@ -11,6 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+//Route index du projet
+Route::get('/','ClientController@index');
+
+//Route des type de client
+Route::prefix('client')->group(function() {
+
 });
+Route::resource('client', 'ClientController');
+
