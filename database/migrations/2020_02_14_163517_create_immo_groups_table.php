@@ -14,7 +14,7 @@ class CreateImmoGroupsTable extends Migration
     public function up()
     {
         Schema::create('immo_groups', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('id')->unique();
             $table->decimal('prix');
             $table->string('images');
             $table->string('lotissement');
